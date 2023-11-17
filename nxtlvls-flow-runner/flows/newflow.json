@@ -1,0 +1,44 @@
+{
+  "name": "newflow",
+  "params": [
+    "modulename"
+  ],
+  "flowData": {
+    "nodes": [
+      {
+        "id": "47fafbe6-1a93-460a-b1de-098a95024695",
+        "type": "startNode",
+        "position": {
+          "x": 50,
+          "y": 200
+        },
+        "data": {
+          "label": "Start"
+        }
+      },
+      {
+        "id": "e1239912-62dc-4654-8558-cd3f6b7dabc1",
+        "type": "endNode",
+        "position": {
+          "x": 600,
+          "y": 200
+        },
+        "data": {
+          "label": "End"
+        }
+      },
+      {
+        "id": "node-2",
+        "type": "ifNode",
+        "position": {
+          "x": 215.4779285130793,
+          "y": 58.72755786802446
+        },
+        "data": {
+          "label": "ifNode"
+        }
+      }
+    ],
+    "edges": []
+  }
+}

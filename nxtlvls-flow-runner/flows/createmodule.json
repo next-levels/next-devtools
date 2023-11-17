@@ -1,0 +1,74 @@
+{
+  "name": "createmodule",
+  "params": [
+    "modulename",
+    "directory"
+  ],
+  "config": {
+    "modulename": "wwewew",
+    "directory": "ewe"
+  },
+  "flowData": {
+    "nodes": [
+      {
+        "id": "059f1731-3e4a-4bc4-92e8-0630b2ada1d2",
+        "type": "startNode",
+        "position": {
+          "x": -272,
+          "y": 204
+        },
+        "data": {
+          "label": "Start"
+        }
+      },
+      {
+        "id": "b74e9d31-86d7-4f63-890b-7552510f911b",
+        "type": "endNode",
+        "position": {
+          "x": 1458,
+          "y": 134
+        },
+        "data": {
+          "label": "End"
+        }
+      },
+      {
+        "id": "node-2",
+        "type": "promptProcessNode",
+        "position": {
+          "x": 70,
+          "y": 60
+        },
+        "data": {
+          "label": "promptProcessNode",
+          "selectedPrompt": "like-template",
+          "context": "effects.ts"
+        }
+      },
+      {
+        "id": "node-5",
+        "type": "processNode",
+        "position": {
+          "x": 880.9595156359277,
+          "y": 331.69296254547373
+        },
+        "data": {
+          "label": "processNode",
+          "setSelectedTask": "createFile.js"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "id": "edge-0",
+        "source": "059f1731-3e4a-4bc4-92e8-0630b2ada1d2",
+        "target": "node-2"
+      },
+      {
+        "id": "edge-2",
+        "source": "node-5",
+        "target": "b74e9d31-86d7-4f63-890b-7552510f911b"
+      }
+    ]
+  }
+}

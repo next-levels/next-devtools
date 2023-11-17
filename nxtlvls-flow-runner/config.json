@@ -1,0 +1,15 @@
+{
+  "modelPath": "./tools/scripts/models/",
+  "apiUrl": "https://api.openai.com/v1/engines/davinci-codex/completions",
+  "apiKey": "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",
+  "projects": [
+    {
+      "type": "cms",
+      "path": "apps/vosdellen/src/app/modules/admin/"
+    },
+    {
+      "type": "api",
+      "path": "apps/api/src/app/modules/"
+    }
+  ]
+}

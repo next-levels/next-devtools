@@ -1,0 +1,9 @@
+export interface InsurerEmployee {
+  id: number;
+  firstName: string;
+  lastName: string;
+  email: string;
+  position: string;
+  insurer: Insurer;
+  insurerId: number;
+}

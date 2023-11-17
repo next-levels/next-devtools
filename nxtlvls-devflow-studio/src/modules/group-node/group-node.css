@@ -1,0 +1,23 @@
+.group-node {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+  padding: 10px;
+  width: 200px;
+}
+
+.group-node-inputs {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.group-node-input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.group-node-input-label {
+  margin-left: 10px;
+}

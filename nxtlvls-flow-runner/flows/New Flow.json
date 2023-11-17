@@ -1,0 +1,58 @@
+{
+  "name": "New Flow",
+  "params": [
+    "module",
+    "submodule",
+    "project"
+  ],
+  "config": {
+    "project": "./apps/vosdellen/src/app/modules/admin/{{parentmodule}}/modules/{{modulename}}/",
+    "module": "insurer",
+    "submodule": "gurantee"
+  },
+  "flowData": {
+    "nodes": [
+      {
+        "id": "09aa0298-6e8d-49bc-9571-22dcc4e2224c",
+        "type": "startNode",
+        "position": {
+          "x": 50,
+          "y": 200
+        },
+        "data": {
+          "label": "Start"
+        }
+      },
+      {
+        "id": "68b5352f-4cc7-436f-983b-e573d36a379b",
+        "type": "endNode",
+        "position": {
+          "x": 1396,
+          "y": -12
+        },
+        "data": {
+          "label": "End"
+        }
+      },
+      {
+        "id": "node-3",
+        "type": "promptProcessNode",
+        "position": {
+          "x": 654,
+          "y": -159
+        },
+        "data": {
+          "label": "promptProcessNode",
+          "selectedPrompt": "like-template"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "id": "edge-configa-4",
+        "source": "node-2",
+        "target": "node-3"
+      }
+    ]
+  }
+}

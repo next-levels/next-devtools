@@ -1,0 +1,372 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.node {
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  overflow: hidden !important;
+  /* border: #000000 4px solid; */
+  background: white;
+  padding-top: 20px;
+  box-shadow: 0 0 8px 0px #0000006b;
+}
+
+@keyframes linearGradientMove {
+  100% {
+    background-position: 4px 0, -4px 100%, 0 -4px, 100% 4px  !important;
+  }
+}
+
+
+@-webkit-keyframes rotate {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.node::before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  left: -50%;
+  top: -50%;
+  width: 200%;
+  height: 200%;
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-image: conic-gradient(transparent, #512da8, transparent 30%);
+  visibility: hidden;
+}
+.node::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 6px;
+  top: 6px;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  background: #fff;
+  border-radius: 5px;
+}
+
+
+
+@-webkit-keyframes opacityChange {
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes opacityChange {
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.start .node:before {
+  visibility: visible;
+  animation: rotate 4s linear infinite;
+}
+
+
+.node-header {
+  width: 100%;
+  display: flex;
+  align-content: space-between;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: aqua;
+}
+
+.task-header{
+  background: #fbff46;
+}
+
+.flow-header{
+  background: #ffbf53;
+}
+
+.node-body {
+  padding: 20px;
+}
+
+.node-body-settings {
+  width: 78%;
+  margin-left: auto;
+  padding-top: 15px;
+  font-size: 17px;
+}
+
+.node-body-settings > div {
+  margin-bottom: 20px;
+  border: #000 solid 2px;
+  box-shadow: none;
+}
+
+.node-body-settings button {
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.node-body-settings input {
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.node-button {
+  position: absolute;
+  top: -16px;
+  right: -17px;
+  background: white !important;
+  border-radius: 20px;
+  border: rgb(170 170 170) 1px dashed !important;
+  z-index: 99;
+}
+
+@keyframes dash {
+  to {
+    background-position: 1000px;
+  }
+}
+
+.node-button:hover {
+  animation: dash 1s linear infinite;
+}
+
+.node-button svg {
+  display: inline-block;
+  flex: 0 0 auto;
+  width: 12px;
+  height: 12px;
+  fill: rgb(170 170 170);
+  stroke: rgb(170 170 170);
+}
+
+.start-node,
+.end-node {
+  border: black 1px solid;
+  font-weight: bold;
+}
+
+.node-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #512da8;
+  margin-right: 20px;
+}
+
+.react-flow__handle-left {
+   left: -7px !important;
+  transform: translate(0, -50%);
+}
+
+.react-flow__handle-right {
+  right: -8px;
+  transform: translate(0, -50%);
+}
+
+.react-flow__handle {
+  position: absolute !important;
+   min-width: 15px !important;
+  min-height: 15px !important;
+  width: 6px;
+  height: 6px;
+  background: #1a192b;
+  border: none !important;
+  border-radius: 100%;
+  z-index: 9999999;
+  background: rgb(3 255 255) !important;
+}
+
+.process-node-level0 .react-flow__handle{
+  background: #fbff46 !important;
+}
+
+.flow-node-level0 .react-flow__handle{
+  background: #ffbf53 !important;
+}
+
+
+.prompt-select {
+  height: 30px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.helper-node {
+  font-size: 10px;
+  padding: 5px;
+}
+
+.helper-node input {
+  font-size: 11px;
+  margin-bottom: 5px;
+  width: 70%;
+}
+
+
+.helper-header{
+  background: #000;
+}
+
+.helper-header .node-title{
+  color: aqua;
+}
+
+.helper-header .node-title svg{
+  fill: aqua;
+  stroke: aqua;
+}
+
+.success .node-header{
+  background: #00ff49;
+}
+
+.error .node-header{
+  background: #ff0000;
+}
+
+
+.helper-node-level0 .node-body{
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+
+
+.helper-node-level0 .node-body .node-body-settings{
+  width: 100%;
+  padding-top: 7px;
+}
+
+.helper-node-level0 .node-body .node-body-settings > div{
+  margin-bottom: 10px;
+}
+
+.helper-node-level0 .react-flow__handle{
+  background: #000000 !important;
+}
+
+.operation-node {
+  background: #512da8;
+  color: white;
+}
+
+.menu-wrapper {
+  padding-top: 14px;
+  padding-bottom: 14px;
+  text-align: left;
+}
+
+.menu-item {
+  display: inline;
+  padding: 25px;
+  font-size: 20px;
+}
+
+.active .menu-item {
+  color: #512da8;
+}
+
+.szh-menu__item {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0.375rem 1.5rem;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.no-underline {
+  text-decoration: none;
+  color: inherit;
+}
+
+.reactflow-wrapper {
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.reactflow-toolbar-wrapper {
+  width: 30%;
+  height: 220px;
+  position: absolute;
+  top: 57px;
+  right: 0;
+}
+
+.required-param {
+  position: absolute;
+  left: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.node-input-default {
+  position: absolute;
+  left: 0;
+  font-size: 14px;
+  font-weight: 600;
+  top:50%
+}
+
+.required-param .input-label {
+  margin-left: 14px;
+}
+
+.node-input-default .input-label {
+  margin-left: 14px;
+}
+
+.node-body-settings-button{
+  border: none !important;
+}
+
+.action-wrapper{
+  position: fixed;
+  right: -110px;
+  top: 27%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  z-index: 99;
+}
+
+.action-wrapper button{
+  margin-bottom: 10px;
+  border: none !important;
+}
+

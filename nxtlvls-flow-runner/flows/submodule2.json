@@ -1,0 +1,57 @@
+{
+  "name": "submodule2",
+  "params": [
+    "module",
+    "submodule",
+    "project"
+  ],
+  "flowData": {
+    "nodes": [
+      {
+        "id": "53d167f4-b114-4924-9918-3498cea4343a",
+        "type": "startNode",
+        "position": {
+          "x": -86.90788005376271,
+          "y": 149.2364040250094
+        },
+        "data": {
+          "label": "Start"
+        }
+      },
+      {
+        "id": "df4e9b07-8a8f-4116-9634-be36ab53e996",
+        "type": "endNode",
+        "position": {
+          "x": 1081.6862665297183,
+          "y": 39.003837608427546
+        },
+        "data": {
+          "label": "End"
+        }
+      },
+      {
+        "id": "node-2",
+        "type": "promptProcessNode",
+        "position": {
+          "x": 302.5604884614001,
+          "y": -184.9556046514417
+        },
+        "data": {
+          "label": "promptProcessNode"
+        }
+      },
+      {
+        "id": "node-3",
+        "type": "processNode",
+        "position": {
+          "x": 663.7069923076,
+          "y": -87.49833497341848
+        },
+        "data": {
+          "label": "processNode"
+        }
+      }
+    ],
+    "edges": []
+  }
+}

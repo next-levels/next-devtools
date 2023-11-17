@@ -1,0 +1,44 @@
+{
+  "name": "test",
+  "params": [
+    "test"
+  ],
+  "flowData": {
+    "nodes": [
+      {
+        "id": "df1d5da6-3bc2-40ee-811f-4c1cd0394e8c",
+        "type": "startNode",
+        "position": {
+          "x": 50,
+          "y": 200
+        },
+        "data": {
+          "label": "Start"
+        }
+      },
+      {
+        "id": "5aedc93a-f600-492b-a74c-3740d848da72",
+        "type": "endNode",
+        "position": {
+          "x": 600,
+          "y": 200
+        },
+        "data": {
+          "label": "End"
+        }
+      },
+      {
+        "id": "node-2",
+        "type": "execFlowNode",
+        "position": {
+          "x": 287.01899198613745,
+          "y": -77.41228273280527
+        },
+        "data": {
+          "label": "execFlowNode"
+        }
+      }
+    ],
+    "edges": []
+  }
+}

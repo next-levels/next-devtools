@@ -1,0 +1,271 @@
+{
+  "name": "submodule",
+  "params": [
+    "module",
+    "submodule",
+    "project"
+  ],
+  "config": {
+    "project": "./apps/vosdellen/src/app/modules/admin/{{parentmodule}}/modules/{{modulename}}/",
+    "module": "insurer",
+    "submodule": "gurantee"
+  },
+  "flowData": {
+    "nodes": [
+      {
+        "id": "37c630f0-3797-4fad-b097-cfeeb7b64cfa",
+        "type": "startNode",
+        "position": {
+          "x": -493.36675050156884,
+          "y": 140.95554395575778
+        },
+        "data": {
+          "label": "Start"
+        }
+      },
+      {
+        "id": "664ac55d-f69e-4778-b594-e5cbcf054085",
+        "type": "endNode",
+        "position": {
+          "x": 2366.394273478826,
+          "y": 363.04863849571626
+        },
+        "data": {
+          "label": "End"
+        }
+      },
+      {
+        "id": "node-2",
+        "type": "processNode",
+        "position": {
+          "x": 101.79787145797096,
+          "y": 228.25088689251209
+        },
+        "data": {
+          "label": "processNode",
+          "setSelectedTask": "executeBash.js",
+          "selectedTask": "executeBash.js"
+        }
+      },
+      {
+        "id": "node-5",
+        "type": "inputNode",
+        "position": {
+          "x": 48.396640464795524,
+          "y": -40.01385880475891
+        },
+        "data": {
+          "label": "inputNode",
+          "outputName": "command",
+          "content": "ng g m {{directory}}"
+        }
+      },
+      {
+        "id": "node-8",
+        "type": "promptProcessNode",
+        "position": {
+          "x": 695.0929379109677,
+          "y": -97.17508866546706
+        },
+        "data": {
+          "label": "promptProcessNode",
+          "selectedPrompt": "like-template",
+          "context": "effects.ts"
+        }
+      },
+      {
+        "id": "node-11",
+        "type": "promptProcessNode",
+        "position": {
+          "x": 652.8815438530017,
+          "y": 285.2852347137824
+        },
+        "data": {
+          "label": "promptProcessNode",
+          "selectedPrompt": "like-template",
+          "context": "store.ts"
+        }
+      },
+      {
+        "id": "node-14",
+        "type": "promptProcessNode",
+        "position": {
+          "x": 599.0483224197859,
+          "y": 626.6902683759724
+        },
+        "data": {
+          "label": "promptProcessNode",
+          "selectedPrompt": "like-template",
+          "context": "facade.ts"
+        }
+      },
+      {
+        "id": "node-20",
+        "type": "processNode",
+        "position": {
+          "x": 1216.596939175692,
+          "y": -17.473457029448127
+        },
+        "data": {
+          "label": "processNode",
+          "setSelectedTask": "createFile.js",
+          "selectedTask": "createFile.js"
+        }
+      },
+      {
+        "id": "node-23",
+        "type": "processNode",
+        "position": {
+          "x": 1097.759597756987,
+          "y": 316.95469420772145
+        },
+        "data": {
+          "label": "processNode",
+          "setSelectedTask": "createFile.js",
+          "selectedTask": "createFile.js"
+        }
+      },
+      {
+        "id": "node-28",
+        "type": "processNode",
+        "position": {
+          "x": 1074,
+          "y": 629
+        },
+        "data": {
+          "label": "processNode",
+          "selectedTask": "createFile.js"
+        }
+      },
+      {
+        "id": "node-32",
+        "type": "processNode",
+        "position": {
+          "x": 1682.77795704738,
+          "y": 496.4332684799185
+        },
+        "data": {
+          "label": "processNode",
+          "selectedTask": "checkImports.js"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "id": "edge-0",
+        "source": "37c630f0-3797-4fad-b097-cfeeb7b64cfa",
+        "target": "node-2"
+      },
+      {
+        "id": "edge-1",
+        "source": "node-5",
+        "target": "node-2"
+      },
+      {
+        "id": "edge-2",
+        "source": "node-2",
+        "target": "node-8"
+      },
+      {
+        "id": "edge-3",
+        "source": "node-2",
+        "target": "node-11"
+      },
+      {
+        "id": "edge-4",
+        "source": "node-2",
+        "target": "node-14"
+      },
+      {
+        "id": "edge-5",
+        "source": "node-2",
+        "target": "node-17"
+      },
+      {
+        "id": "edge-6",
+        "source": "node-8",
+        "target": "node-20"
+      },
+      {
+        "id": "edge-7",
+        "source": "node-11",
+        "target": "node-23"
+      },
+      {
+        "id": "edge-10",
+        "source": "node-20",
+        "target": "node-32"
+      },
+      {
+        "id": "edge-11",
+        "source": "node-23",
+        "target": "node-32"
+      },
+      {
+        "id": "edge-14",
+        "source": "node-32",
+        "target": "node-38"
+      },
+      {
+        "id": "edge-15",
+        "source": "node-38",
+        "target": "664ac55d-f69e-4778-b594-e5cbcf054085"
+      },
+      {
+        "id": "edge-12",
+        "source": "node-14",
+        "target": "node-25"
+      },
+      {
+        "id": "edge-13",
+        "source": "node-2",
+        "target": "node-8"
+      },
+      {
+        "id": "edge-14",
+        "source": "node-2",
+        "target": "node-8"
+      },
+      {
+        "id": "edge-16",
+        "source": "node-2",
+        "target": "node-8"
+      },
+      {
+        "id": "edge-configa",
+        "source": "node-2",
+        "target": "node-8"
+      },
+      {
+        "id": "edge-30",
+        "source": "node-14",
+        "target": "node-28"
+      },
+      {
+        "id": "edge-31",
+        "source": "node-2",
+        "target": "node-8"
+      },
+      {
+        "id": "edge-32",
+        "source": "node-2",
+        "target": "node-11"
+      },
+      {
+        "id": "edge-33",
+        "source": "node-2",
+        "target": "node-14"
+      },
+      {
+        "id": "edge-33",
+        "source": "node-32",
+        "target": "664ac55d-f69e-4778-b594-e5cbcf054085"
+      },
+      {
+        "id": "edge-34",
+        "source": "node-28",
+        "target": "node-32"
+      }
+    ]
+  }
+}
